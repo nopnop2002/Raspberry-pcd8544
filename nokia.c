@@ -43,8 +43,8 @@ typedef struct {
   uint8_t reverse;
   uint8_t enhance;
   uint8_t size;
-  uint8_t ascii[16];
-  uint16_t sjis[16];
+  uint8_t ascii[26];
+  uint16_t sjis[26];
 } SaveData;
 
 typedef struct {
