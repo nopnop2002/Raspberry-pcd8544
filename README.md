@@ -4,12 +4,12 @@ pcd8544(NOKIA5110) Command Line Tool for Raspberry Pi / Orange Pi
 You can operate from command line.  
 
 Command line parameters:  
-+1 String : String for #1 line(with External 8X8 Font)  
-+2 String : String for #2 line(with External 8X8 Font)  
-+3 String : String for #3 line(with External 8X8 Font)  
-+4 String : String for #4 line(with External 8X8 Font)  
-+5 String : String for #5 line(with External 8X8 Font)  
-+6 String : String for #6 line(with External 8X8 Font)  
++1 String : String for #1 line(with External 4X8 Font)  
++2 String : String for #2 line(with External 4X8 Font)  
++3 String : String for #3 line(with External 4X8 Font)  
++4 String : String for #4 line(with External 4X8 Font)  
++5 String : String for #5 line(with External 4X8 Font)  
++6 String : String for #6 line(with External 4X8 Font)  
 +a String : String for #1 line(with Internal 6X8 Font)  
 +b String : String for #2 line(with Internal 6X8 Font)  
 +c String : String for #3 line(with Internal 6X8 Font)  
@@ -70,6 +70,8 @@ cc -o nokia nokia.c fontx.c pcd8544.c -lwiringPi
 bash ./test.sh  
 
 ---
+Line#1-#3 : External 4X8 Font   
+Line#5-#6 : Internal 6X8 Font   
 
 ![pcd8544-11](https://cloud.githubusercontent.com/assets/6020549/25205698/ee9c2584-259e-11e7-9205-8c5fa0f88c0f.JPG)
 
