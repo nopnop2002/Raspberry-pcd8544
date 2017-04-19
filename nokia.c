@@ -1,13 +1,13 @@
 /*
- pcd8544(NOKIA5110) command line tool for Rpi/Opi
+ PCD8544 example
 
  software spi interface
  cc -o nokia nokia.c fontx.c -lwiringPi
  PCD8544    RPI
  ---------------
  1 RST  --- GPIO23   (Pin#16)
- 2 CE   --- SPI CE0  (Pin#10)
- 3 DC   --- GPIO24   (PIn#18
+ 2 CE   --- SPI CE0  (Pin#24)
+ 3 DC   --- GPIO24   (PIn#18)
  4 DIN  --- SPI MOSI (Pin#19)
  5 CLK  --- SPI SCLK (Pin#23)
  6 VCC  --- 3.3V

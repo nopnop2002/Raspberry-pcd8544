@@ -51,7 +51,7 @@ Wire connection
 |NOKIA510|---|Raspberry||
 |:-:|:-:|:-:|:-:|
 |1 RST|---|GPIO23|(Pin#16)|
-|2 CE|---|SPI CE0|(Pin#10)|
+|2 CE|---|SPI CE0|(Pin#24)|
 |3 DC|---|GPIO24|(PIn#18)|
 |4 DIN|---|SPI MOSI|(Pin#19)|
 |5 CLK|---|SPI SCLK|(Pin#23)|
@@ -62,3 +62,16 @@ Wire connection
 (*)There are both module of GND and 3.3V.  
 
 ---
+
+Install  
+git clone https://github.com/nopnop2002/pcd8544_rpi   
+cd pcd8544_rpi/  
+cc -o nokia nokia.c fontx.c pcd8544.c -lwiringPi  
+bash ./test.sh  
+
+---
+
+![pcd8544-3](https://cloud.githubusercontent.com/assets/6020549/25205392/405c3b04-259d-11e7-8084-d648e29477e3.JPG)
+
+![pcd8544-5](https://cloud.githubusercontent.com/assets/6020549/25205395/4a4ee6d4-259d-11e7-8525-55181546d68e.JPG)
+
