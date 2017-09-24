@@ -65,7 +65,8 @@ Red module connects a backlight pin to GND, a backlight lights up.
 
 ---
 
-Install  
+How to install  
+
 git clone https://github.com/nopnop2002/pcd8544_rpi   
 cd pcd8544_rpi/  
 cc -o nokia nokia.c fontx.c pcd8544.c -lwiringPi  
