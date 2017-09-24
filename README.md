@@ -62,6 +62,7 @@ Wire connection
 (*)There are both module of GND and 3.3V.  
 Blue module supplies a backlight pin with 3.3V, a backlight lights up.   
 Red module connects a backlight pin to GND, a backlight lights up.   
+
 ---
 
 Install  
