@@ -48,7 +48,7 @@ sudo ./nokia s
 
 Wire connection
 
-|NOKIA510|---|Raspberry||
+|NOKIA510|---|RPi/OPi||
 |:-:|:-:|:-:|:-:|
 |1 RST|---|GPIO23|(Pin#16)|
 |2 CE|---|SPI CE0|(Pin#24)|
@@ -60,7 +60,8 @@ Wire connection
 |8 GND|---|GND||
 
 (*)There are both module of GND and 3.3V.  
-
+Blue module supplies a backlight pin with 3.3V, a backlight lights up.   
+Red module connects a backlight pin to GND, a backlight lights up.   
 ---
 
 Install  
