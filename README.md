@@ -32,6 +32,7 @@ P5 n : Set start colum n to line#5
 P6 n : Set start colum n to line#6  
 r  : remove all string  
 s  : show display  
+c num : set contrast to num   
 
 You can use within script.  
 #!/bin/bash  
