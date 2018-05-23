@@ -401,8 +401,8 @@ int LCDdrawString(uint8_t x, uint8_t page, char *str, uint8_t reverse, uint8_t e
 }
 
 int LCDdrawChar(uint8_t x, uint8_t page, char c, uint8_t reverse, uint8_t enhance) {
-  if (page  > 5) return;
-  if ((x+5) >= LCDWIDTH) return;
+  if (page  > 5) return 0;
+  if ((x+5) >= LCDWIDTH) return 0;
   uint8_t i,j;
   for ( i =0; i<5; i++ ) {
     uint8_t d = *(font+(c*5)+i);
