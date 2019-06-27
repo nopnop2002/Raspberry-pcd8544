@@ -68,10 +68,12 @@ With RED module, if you connects a backlight pin to GND, a backlight lights up.
 
 How to install  
 
+```
 git clone https://github.com/nopnop2002/pcd8544_rpi   
 cd pcd8544_rpi/  
 cc -o nokia nokia.c fontx.c pcd8544.c -lwiringPi -lpthread   
 bash ./test.sh  
+```
 
 ---
 Line#1-#3 : External 4X8 Font   
