@@ -403,11 +403,9 @@ int LCDdrawString(uint8_t x, uint8_t page, char *str, uint8_t reverse, uint8_t e
 int LCDdrawChar(uint8_t x, uint8_t page, char c, uint8_t reverse, uint8_t enhance) {
   if (page  > 5) return 0;
   if ((x+5) >= LCDWIDTH) return 0;
-  uint8_t i,j;
+  uint8_t i;
   for ( i =0; i<5; i++ ) {
     uint8_t d = *(font+(c*5)+i);
-    uint8_t j;
-
     pcd8544_buffer[page][x+i] = d;
   }
   return x + 6;
@@ -465,7 +463,7 @@ int LCDdrawUTF8String(FontxFile *fx,int x,int y,unsigned char *utfs,
   int i;
   int spos;
   uint16_t sjis[16];
-  spos = String2SJIS(utfs, strlen(utfs), sjis, 16);
+  spos = String2SJIS(utfs, strlen((char *)utfs), sjis, 16);
   for(i=0;i<spos;i++) {
     x = LCDdrawSJISChar(fx,x,y,sjis[i],reverse,enhance);
   }

@@ -102,10 +102,10 @@ void DumpSaveFrame(SaveFrame hoge) {
     printf("[%d].enhance=%d ",i,hoge.save[i].enhance);
     printf("[%d].size=%d\n",i,hoge.save[i].size);
     for(j=0;j<hoge.save[i].size;j++) {
-      if (i,hoge.save[i].ank == 1) {
+      if (hoge.save[i].ank == 1) {
         printf("[%d].ascii[%d]=%x\n",i,j,hoge.save[i].ascii[j]);
       }
-      if (i,hoge.save[i].utf == 1) {
+      if (hoge.save[i].utf == 1) {
         printf("[%d].ascii[%d]=%x\n",i,j,hoge.save[i].sjis[j]);
       }
     }
@@ -114,7 +114,7 @@ void DumpSaveFrame(SaveFrame hoge) {
 
 int main (int argc,char **argv)
 {
-  int i,j,k;
+  int i;
   char cpath[128];
   FILE *fp;
   SaveFrame sv;
@@ -129,16 +129,16 @@ if(_DEBUG_)  printf("argv[0]=%s\n",argv[0]);
     }
   }
   strcat(cpath,"nokia.conf");
-if(_DEBUG_)  printf("cpath=%s\n",cpath);
+if(_DEBUG_)printf("cpath=%s\n",cpath);
 
   struct stat stat_buf;
   if (stat(cpath,&stat_buf) == 0) {
-if(_DEBUG_)    printf("file found\n");
+if(_DEBUG_)printf("file found\n");
     fp = fopen(cpath,"rb");
     fread(&sv,sizeof(sv),1,fp);
     fclose(fp);
   } else {
-if(_DEBUG_)    printf("file not found\n");
+if(_DEBUG_)printf("file not found\n");
     memset(&sv,0,sizeof(sv));
   }
 if(_DEBUG_)DumpSaveFrame(sv);
@@ -166,7 +166,7 @@ if(_DEBUG_)DumpSaveFrame(sv);
     num = (numc[1] - '0') - 1;
       
 if(_DEBUG_)printf("add string to line [%d]\n",num);
-    sv.save[num].size = String2SJIS(argv[2], strlen(argv[2]), sv.save[num].sjis, 16);
+    sv.save[num].size = String2SJIS((unsigned char *)argv[2], strlen(argv[2]), sv.save[num].sjis, 16);
     sv.save[num].ank = 0;
     sv.save[num].utf = 1;
 if(_DEBUG_)DumpSaveFrame(sv);

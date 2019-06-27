@@ -60,9 +60,9 @@ Wire connection
 |7 BL|---|3.3V/GND(*)||
 |8 GND|---|GND||
 
-(*)There are both module of GND and 3.3V.  
-Blue module supplies a backlight pin with 3.3V, a backlight lights up.   
-Red module connects a backlight pin to GND, a backlight lights up.   
+(*)There are two module of GND and 3.3V.  
+With BLUE module, if you supplies 3.3V to backlight pin, a backlight lights up.   
+With RED module, if you connects a backlight pin to GND, a backlight lights up.   
 
 ---
 

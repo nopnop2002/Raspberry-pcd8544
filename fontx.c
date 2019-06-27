@@ -26,7 +26,6 @@ void Fontx_init(FontxFile *fxs,const char *f0,const char *f1)
 bool Fontx_openFontxFile(FontxFile *fx)
 {
   FILE *f;
-  int i;
 
   if(!fx->opened){
     fx->opened = true;
@@ -163,14 +162,11 @@ bool GetFontx(FontxFile *fxs, uint32_t sjis , uint8_t *pGlyph,
 {
   
   int i;
-//  FontxFile fx;
   long offset;
-  int ret;
 
 if(FontxDebug)printf("[GetFontx]sjis=%x %d\n",sjis,sjis);
   for(i=0; i<2; i++){
     if(!Fontx_openFontxFile(&fxs[i])) continue;
-//    printf("openFontxFile[%d]\n",i);
     
     if(sjis < 0x100){
       if(fxs[i].is_ank){
@@ -368,7 +364,6 @@ void Font2Bitmap(uint8_t *fonts, uint8_t *line, uint8_t w, uint8_t h, uint8_t in
 
   int mask = 7;
   int fontp;
-  int linep;
   fontp = 0;
   for(y=0; y<h; y++){
     for(x=0; x<w; x++){
@@ -434,7 +429,7 @@ void ShowFont(uint8_t *fonts, uint8_t pw, uint8_t ph) {
 
 // Bitmapの表示
 void ShowBitmap(uint8_t *bitmap, uint8_t pw, uint8_t ph) {
-  int x,y,z,fpos;
+  int x,y,fpos;
   for (y=0;y<(ph+7)/8;y++) {
     for (x=0;x<pw;x++) {
 printf("%02x ",bitmap[x+y*32]);
