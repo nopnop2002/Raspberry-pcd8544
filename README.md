@@ -1,4 +1,4 @@
-# pcd8544_rpi
+# Raspberry-pcd8544
 pcd8544(NOKIA5110) Command Line Tool for Raspberry Pi / Orange Pi
 
 You can operate from command line.  
@@ -49,7 +49,7 @@ sudo ./nokia s
 
 # Wire connection
 
-|NOKIA510|---|RPi/OPi||
+|NOKIA5110|---|RPi/OPi||
 |:-:|:-:|:-:|:-:|
 |1 RST|---|GPIO23|(Pin#16)|
 |2 CE|---|SPI CE0|(Pin#24)|
