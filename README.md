@@ -3,7 +3,7 @@ pcd8544(NOKIA5110) Command Line Tool for Raspberry Pi / Orange Pi
 
 You can operate from command line.  
 
-Command line parameters:  
+# Command line parameters:  
 +1 String : String for #1 line(with External 4X8 Font)  
 +2 String : String for #2 line(with External 4X8 Font)  
 +3 String : String for #3 line(with External 4X8 Font)  
@@ -47,7 +47,7 @@ sudo ./nokia s
 
 ---
 
-Wire connection
+# Wire connection
 
 |NOKIA510|---|RPi/OPi||
 |:-:|:-:|:-:|:-:|
@@ -66,7 +66,13 @@ With RED module, if you connects a backlight pin to GND, a backlight lights up.
 
 ---
 
-How to install  
+# Software requirement
+
+WiringPi Library   
+
+---
+
+# How to install  
 
 ```
 git clone https://github.com/nopnop2002/Raspberry-pcd8544
@@ -75,7 +81,6 @@ cc -o nokia nokia.c fontx.c pcd8544.c -lwiringPi -lpthread
 bash ./test.sh
 ```
 
----
 Line#1-#3 : External 4X8 Font   
 Line#5-#6 : Internal 6X8 Font   
 
