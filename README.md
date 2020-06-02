@@ -88,3 +88,19 @@ Line#5-#6 : Internal 6X8 Font
 
 ![pcd8544-12](https://cloud.githubusercontent.com/assets/6020549/25205703/f1b3f3e6-259e-11e7-8367-b39dec00e196.JPG)
 
+---
+
+# RaspberryPi HAT
+```
+// pin setup
+#define _sclk  0
+#define _din   1
+#define _dc    2
+#define _cs    3
+#define _rst   4
+```
+
+![PI-HAT-1](https://user-images.githubusercontent.com/6020549/83468904-1cf5d780-a4b9-11ea-88ab-86cf03c2d0ed.JPG)
+![PI-HAT-2](https://user-images.githubusercontent.com/6020549/83468896-1a937d80-a4b9-11ea-919c-ed41dd193e89.JPG)
+![PI-HAT-3](https://user-images.githubusercontent.com/6020549/83468899-1bc4aa80-a4b9-11ea-836f-d731293e81b8.JPG)
+
